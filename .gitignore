@@ -6,5 +6,11 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Ticket 4 asks you to add two more entries here, with a comment above each
-# saying why. Read the ones above first: each says WHY, not just WHAT.
+# Local secrets (API keys, passwords, tokens) — once pushed they are public and
+# stay in the history forever, so they must never reach a commit
+.env
+.env.*
+
+# Installed dependencies — huge, rebuilt from the lockfile by `npm install`,
+# so committing them only bloats the repo
+node_modules/
