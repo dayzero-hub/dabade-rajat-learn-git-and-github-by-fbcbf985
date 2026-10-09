@@ -66,3 +66,12 @@ the exercise for you.
 
 (If you are an engineer auditing the templates: this is not the thin-template gap that DZ-382
 fixed elsewhere. It is a decision, recorded here so it does not get "fixed".)
+
+## What .gitignore is for
+
+A `.gitignore` lists files git should pretend are not there, so `git add .` never picks them
+up. It is for stuff that is either rebuilt on each machine (dependencies, build output),
+personal (editor settings, OS junk), or dangerous to share (keys, passwords, tokens).
+
+Deleting a committed secret does not fix it: the old commit still holds it, anyone who cloned
+or viewed it already has it, so the only real fix is to revoke the key and issue a new one.
